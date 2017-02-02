@@ -9,7 +9,7 @@ import seedu.addressbook.data.exception.IllegalValueException;
 public class Address {
 
     public static final String EXAMPLE = "123, some street";
-    public static final String MESSAGE_ADDRESS_CONSTRAINTS = "Person addresses can be in any format";
+    public static final String MESSAGE_ADDRESS_CONSTRAINTS = "Input address in the format BlockNum, StreetNum, UnitNum, PostalCode";
     public static final String ADDRESS_VALIDATION_REGEX = ".+, .+, .+, .+";
 
     private boolean isPrivate;
@@ -59,7 +59,7 @@ public class Address {
 
     @Override
     public int hashCode() {
-        return value.hashCode();
+        return toString().hashCode();
     }
 
     public boolean isPrivate() {
