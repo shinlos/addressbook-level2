@@ -12,6 +12,10 @@ public class Contact {
 	public String toString() {
         return value;
     }
+	
+	public int hashCode() {
+        return value.hashCode();
+    }
 
 	public boolean isPrivate() {
         return isPrivate;
