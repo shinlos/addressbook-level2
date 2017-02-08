@@ -8,6 +8,10 @@ public class Contact {
 		this.isPrivate = isPrivate;
 		this.value = value;
 	}
+	
+	public String toString() {
+        return value;
+    }
 
 	public boolean isPrivate() {
         return isPrivate;
