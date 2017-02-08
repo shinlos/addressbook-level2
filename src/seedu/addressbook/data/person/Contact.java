@@ -15,10 +15,12 @@ public class Contact {
         this.value = trimmedValue;
 	}
 	
+	@Override
 	public String toString() {
         return value;
     }
 	
+	@Override
 	public int hashCode() {
         return value.hashCode();
     }
@@ -27,6 +29,9 @@ public class Contact {
         return isPrivate;
     }
 	
+	/**
+     * Checks if a given string is a valid person contact detail.
+     */
 	public static boolean isValid(String test, String regex) {
         return test.matches(regex);
     }
